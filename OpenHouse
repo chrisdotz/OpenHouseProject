@@ -1,0 +1,39 @@
+class House:
+  savings = (795,664)
+  color = "Brown"
+  built = "2016"
+  on_sale = True
+  sq = "4586 sq"
+  price = "$564,450"
+ 
+house = House()
+
+user_Op = input("Are you interested in a new home (Yes or No) ")
+
+user_Op = user_Op.lower()
+
+if user_Op == "yes":
+    print('''
+    loading...
+    ^  ^
+     __
+     
+    ''')
+else:
+    quit()
+
+
+if house.on_sale == True:
+  print(house.price, "is the going price.")
+  print(f"The home avaliable has the specs of {house.color}, built {house.built}, and has {house.sq}")
+else:
+  print("Sorry check again later!")
+ 
+buy = input('Enter the keyword "BUY" to purchase ')
+
+if buy == "BUY":
+    house.on_sale = False
+    print("Purchase confirmed")
+    print("Savings Balance: $231214")
+else:
+    print("A new home is a big decision, no worries. Have a great day.")
